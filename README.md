@@ -1,6 +1,11 @@
 # Task
 Task about interview
 
+Please run below steps to install:
+
+1. run "npm i"
+
+
 
 1 task:
 
@@ -8,7 +13,15 @@ Write a simple application that accepts a value (integer) and returns the fibona
 The application should be performant at scale to handle larger numbers without slowing down exponentially.
 
 
-Answer: please check fibonacci.js code
+Answer: http://localhost:3000/fibonacci
+method: post
+payload: {
+ "value":79
+}
+
+response: {
+    "position": 11
+}
 
 2 task: 
 
@@ -21,7 +34,51 @@ The function should expect two parameters viz;
   - list: A list of the items to be sorted.
 
 
-  Answer: please check mixedinputsort.js code
+  Answer: http://localhost:3000/imixedinputsort
+
+method: post
+payload: {
+ "mixedinput": [
+    "test",
+     345,
+     false,
+     0,
+     12.00,
+     "",
+     "ABC",
+     -45.16,
+     "Kiran",
+     true,
+     "Basha",
+     1,
+     -1,
+     0.60625,
+     "888.87",
+     "%($(F"    
+   ],
+   "order":"ASC"
+}
+
+response: {
+    "result": [
+        false,
+        true,
+        -45.16,
+        -1,
+        0,
+        0.60625,
+        1,
+        12,
+        345,
+        "",
+        "%($(F",
+        "888.87",
+        "ABC",
+        "Basha",
+        "Kiran",
+        "test"
+    ]
+}
 
 
   3 task: 
@@ -31,4 +88,16 @@ array. For example,
   - transformDoodles([[1, 3], [true, "5"]]) should return [1, 3, true, "5"]
 Note, write a clearly defined explainable code for this implementation without using the Array.prototype.flat() in-built function.
 
-Answer: please check flattern.js code
+Answer: http://localhost:3000/flattern
+method: post
+payload: {
+ "fattern": [[1, 3], [true, "5"]]
+}
+response: {
+    "result": [
+        1,
+        3,
+        true,
+        "5"
+    ]
+}
